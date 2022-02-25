@@ -1,2 +1,5 @@
 # Ignore the Python virtual environment
 .venv
+
+# Ignore the outputs
+output

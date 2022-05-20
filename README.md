@@ -1,4 +1,4 @@
-<img src="assets/schematics/process_schematic.png">
+<img src="assets/schematics/process_schematic.png" width="70%" class="center">
 
 # Process State Identification
 

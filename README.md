@@ -4,7 +4,7 @@
 
 <img src="https://img.shields.io/badge/Stellenbosch University-BEng ChemE-008BC0?style=flat"/>
 
-A framework for identifying a process' state using PCA and statistical classification.
+BEng ChemE final year project using PCA and statistical classification to identify a process' state.
 
 ## Usage instructions
 

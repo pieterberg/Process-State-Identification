@@ -8,6 +8,6 @@ A framework for identifying a process' state using PCA and statistical classific
 
 ## Usage instructions
 
-Run the Simulink model from the MATLAB Live Script `process_model/copper_solvent_extraction_model.mlx`.
+1. Run the Simulink model from the MATLAB Live Script `process_model/copper_solvent_extraction_model.mlx`.
 
-Run the MATLAB Live Script from the main `Process State Identification` folder.
+1. Run the MATLAB Live Script from the main `Process State Identification` folder.

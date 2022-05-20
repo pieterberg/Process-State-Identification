@@ -1,5 +1,7 @@
-# Model State Identification
+<img src="assets/schematics/process_schematic.png">
+
+# Process State Identification
 
 <img src="https://img.shields.io/badge/Stellenbosch University-BEng ChemE-008BC0?style=flat"/>
 
-Framework for identifying a process' state by comparing unknown data with a database of simulated states 
+A framework for identifying a process' state using PCA and statistical classification.

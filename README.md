@@ -16,13 +16,17 @@ Chemical Engineering final year project using PCA and statistical classification
 
 ### Simulation settings
 
-| Setting               | Values                    | Description                                                                 |
-|-----------------------|---------------------------|-----------------------------------------------------------------------------|
-| `SAVE_IMAGES`         | - `true` <br> - `false`   | Saves the generated images to the respective output folder if set to `true` |
-| `SAVE_DATA`           | - `true` <br> - `false`   | Saves the simulation data to the respective output folder if set to `true`  |
-| `SENSOR_NOISE`        | - `true` <br> - `false`   | Adds sensor noise to the measurements if set to `true`                      |
-| `FEEDBACK_CONTROL`    | - `true` <br> - `false`   | Enables feedback control of the process if set to `true`                    |
-| `FEEDFORWARD_CONTROL` | - `true` <br> - `false`   | Enables feedforward control of the process if set to `true`                 |
+| Setting                           | Values                       | Description                                                                 |
+|-----------------------------------|------------------------------|-----------------------------------------------------------------------------|
+| `SAVE_IMAGES`                     | `true` <br> `false`          | Saves the generated images to the respective output folder if set to `true`.|
+| `SAVE_DATA`                       | `true` <br> `false`          | Saves the simulation data to the respective output folder if set to `true`. |
+| `SENSOR_NOISE`                    | `true` <br> `false`          | Adds sensor noise to the measurements if set to `true`.                     |
+| `FEEDBACK_CONTROL`                | `true` <br> `false`          | Enables feedback control of the process if set to `true`.                   |
+| `FEEDFORWARD_CONTROL`             | `true` <br> `false`          | Enables feedforward control of the process if set to `true`.                |
+| `EXTERNAL_VARIABLES_STEADY_STATE` | `true` <br> `false`          | Sets the external variables to their constant steady-state values when set to `true`, or loads the non-steady-state external variable dataset selected by `EXTERNAL_VARIABLES_DATASET` when set to `false`.|
+| `EXTERNAL_VARIABLES_DATASET`      | `'training'` <br> `'testing'`| Loads the training non-steady-state external variable dataset when set to `'training'`, or the testing non-steady-state external variable dataset when set to `'testing'`. Must specify a dataset to use regardless of the value of `EXTERNAL_VARIABLES_STEADY_STATE`.|
+
+
 
 ### Output folder structure
 

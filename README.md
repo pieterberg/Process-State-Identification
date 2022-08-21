@@ -49,6 +49,16 @@ Create the following folder structure to save the ARX model results:
         |__ feedforward
 ```
 
+Create the following folder structure to save the smoothed external variable data and graphs:
+
+```
+.
+|__ external_variables
+    |___ output
+         |__ data
+         |__ graphs
+
+```
 
 
 

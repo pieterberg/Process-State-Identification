@@ -34,8 +34,8 @@ Create the following folder structure to save to simulation results using the `S
 
 ```
 .
-|__ output
-    |__ process_model
+|__ process_model
+    |__ output
         |__ data
         |__ graphs
             |__ measured_variables

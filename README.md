@@ -6,7 +6,7 @@
 
 Chemical Engineering final year project using PCA and statistical classification to identify a process' state.
 
-## Usage instructions
+## 1. Usage instructions
 
 ### Running the simulation
 
@@ -62,7 +62,9 @@ Create the following folder structure to save the smoothed external variable dat
 
 ```
 
-## Process States
+## 2. Process States
+
+The desired fault combinations can be set using the `PROCESS_STATE` setting. The following table shows which loaded organic valve faults and which lean electrolyte valve faults occur for the selected process state.
 
 | Process State | Loaded Organic Valve | Lean Electrolyte Valve |
 |:-------------:|:--------------------:|:----------------------:|
@@ -75,6 +77,15 @@ Create the following folder structure to save the smoothed external variable dat
 |      `6`      |         stuck        |        stiction        |
 |      `7`      |       stiction       |          stuck         |
 |      `8`      |       stiction       |        stiction        |
+
+The time that the process faults selected by the `PROCESS_STATE` setting happen can be set using the following parameters. Parameters are also provided to set the time at which the process faults stop ocurring. If no end time is desired, set the fault stop time equal to the simulation time.
+
+| Parameter                   | Units | Description                                          |
+|-----------------------------|:-----:|------------------------------------------------------|
+| `valve_LO_fault_start_time` |   s   | Time for the loaded organic valve's fault to occur   |
+| `valve_LO_fault_stop_time`  |   s   | Time for the loaded organic valve's fault to stop    |
+| `valve_LE_fault_start_time` |   s   | Time for the lean electrolyte valve's fault to occur |
+| `valve_LE_fault_stop_time`  |   s   | Time for the lean electrolyte valve's fault to stop  |
 
 ## References
 

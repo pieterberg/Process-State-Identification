@@ -8,13 +8,13 @@ Chemical Engineering final year project using PCA and statistical classification
 
 ## 1. Usage instructions
 
-### Running the simulation
+### 1.1. Running the simulation
 
 1. Run the Simulink model from the MATLAB Live Script `process_model/copper_solvent_extraction_model.mlx`.
 
 1. Run the MATLAB Live Script from the main `Process-State-Identification` folder.
 
-### Simulation settings
+### 1.2. Simulation settings
 
 | Setting                           | Values                       | Description                                                                 |
 |-----------------------------------|------------------------------|-----------------------------------------------------------------------------|
@@ -27,7 +27,7 @@ Chemical Engineering final year project using PCA and statistical classification
 | `EXTERNAL_VARIABLES_DATASET`      | `'training'` <br> `'testing'`| Loads the training non-steady-state external variable dataset when set to `'training'`, or the testing non-steady-state external variable dataset when set to `'testing'`. Must specify a dataset to use regardless of the value of `EXTERNAL_VARIABLES_STEADY_STATE`.|
 | `PROCESS_STATE`                   | see below                    | Select which process faults occur by selecting the process state. See Process States section below. |
 
-### Output folder structure
+### 1.3. Output folder structure
 
 Create the following folder structure to save to simulation results using the `SAVE_IMAGES` and `SAVE_DATA` settings:
 

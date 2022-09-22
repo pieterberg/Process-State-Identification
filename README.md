@@ -78,7 +78,7 @@ The desired fault combinations can be set using the `PROCESS_STATE` setting. The
 |      `7`      |       stiction       |          stuck         |
 |      `8`      |       stiction       |        stiction        |
 
-The time that the process faults selected by the `PROCESS_STATE` setting happen can be set using the following parameters. Parameters are also provided to set the time at which the process faults stop ocurring. If no end time is desired, set the fault stop time equal to the simulation time.
+The time that the selected process faults occur can be set using the following `start_time` parameters. Corresponding `stop_time` parameters are also provided to set the time at which the process faults stop ocurring. If no stop time is desired, set the respective `stop_time` parameter equal to the simulation time.
 
 | Parameter                   | Units | Description                                          |
 |-----------------------------|:-----:|------------------------------------------------------|

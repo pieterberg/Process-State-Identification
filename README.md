@@ -6,6 +6,12 @@
 
 Chemical Engineering final year project using PCA and statistical classification to identify a process' state.
 
+The process model consists of a dynamic model of a copper solvent extraction plant based on the model developed by Komulainen et al. (2009, 2006). 
+The model simulates two control valve faults, namely:
+
+- stuck valves
+- and valve stiction, based on the physical valve stiction model developed by Shoukat Choudhury et al. (2005)
+
 ## 1. Usage instructions
 
 ### 1.1. Running the simulation

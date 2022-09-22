@@ -27,9 +27,6 @@ Chemical Engineering final year project using PCA and statistical classification
 | `EXTERNAL_VARIABLES_DATASET`      | `'training'` <br> `'testing'`| Loads the training non-steady-state external variable dataset when set to `'training'`, or the testing non-steady-state external variable dataset when set to `'testing'`. Must specify a dataset to use regardless of the value of `EXTERNAL_VARIABLES_STEADY_STATE`.|
 | `PROCESS_STATE`                   | see below                    | Select which process faults occur by selecting the process state. See Process States section below. |
 
-
-
-
 ### Output folder structure
 
 Create the following folder structure to save to simulation results using the `SAVE_IMAGES` and `SAVE_DATA` settings:
@@ -66,6 +63,18 @@ Create the following folder structure to save the smoothed external variable dat
 ```
 
 ## Process States
+
+| Process State | Loaded Organic Valve | Lean Electrolyte Valve |
+|:-------------:|:--------------------:|:----------------------:|
+|      `0`      |        normal        |         normal         |
+|      `1`      |         stuck        |         normal         |
+|      `2`      |       stiction       |         normal         |
+|      `3`      |        normal        |          stuck         |
+|      `4`      |        normal        |        stiction        |
+|      `5`      |         stuck        |          stuck         |
+|      `6`      |         stuck        |        stiction        |
+|      `7`      |       stiction       |          stuck         |
+|      `8`      |       stiction       |        stiction        |
 
 ## References
 

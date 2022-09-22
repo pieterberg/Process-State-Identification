@@ -25,6 +25,8 @@ Chemical Engineering final year project using PCA and statistical classification
 | `FEEDFORWARD_CONTROL`             | `true` <br> `false`          | Enables feedforward control of the process if set to `true`.                |
 | `EXTERNAL_VARIABLES_STEADY_STATE` | `true` <br> `false`          | Sets the external variables to their constant steady-state values when set to `true`, or loads the non-steady-state external variable dataset selected by `EXTERNAL_VARIABLES_DATASET` when set to `false`.|
 | `EXTERNAL_VARIABLES_DATASET`      | `'training'` <br> `'testing'`| Loads the training non-steady-state external variable dataset when set to `'training'`, or the testing non-steady-state external variable dataset when set to `'testing'`. Must specify a dataset to use regardless of the value of `EXTERNAL_VARIABLES_STEADY_STATE`.|
+| `PROCESS_STATE`                   | see below                    | Select which process faults occur by selecting the process state. See Process States section below. |
+
 
 
 
@@ -62,6 +64,8 @@ Create the following folder structure to save the smoothed external variable dat
          |__ graphs
 
 ```
+
+## Process States
 
 ## References
 

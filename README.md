@@ -45,6 +45,7 @@ Create the following folder structure to save to simulation results using the `S
         |__ graphs
             |__ measured_variables
             |__ process_variables
+            |__ valve_states
 ```
 
 Create the following folder structure to save the ARX model results:

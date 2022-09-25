@@ -93,6 +93,15 @@ The time that the selected process faults occur can be set using the following `
 | `valve_LE_fault_start_time` |   s   | Time for the lean electrolyte valve's fault to occur |
 | `valve_LE_fault_stop_time`  |   s   | Time for the lean electrolyte valve's fault to stop  |
 
+The valve states are represented using the following values:
+
+| Value | Valve State |
+|:-----:|:-----------:|
+|  `0`  |    normal   |
+|  `1`  |    stuck    |
+|  `2`  |   stiction  |
+
+
 ## References
 
 Komulainen, T., Doyle, F.J., Rantala, A., Jämsä-Jounela, S.L., 2009. Control of an industrial copper solvent extraction process. Journal of Process Control 19, 2–15. https://doi.org/10.1016/j.jprocont.2008.04.019

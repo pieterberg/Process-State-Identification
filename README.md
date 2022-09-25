@@ -101,6 +101,7 @@ The valve states are represented using the following values:
 |  `1`  |    stuck    |
 |  `2`  |   stiction  |
 
+The valve states are selected using Variant Subsystems. The variant subsystems are defined in the `PreLoadFcn` callback of the Simulink model.
 
 ## References
 

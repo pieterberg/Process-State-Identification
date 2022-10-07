@@ -102,6 +102,17 @@ Create the following folder structure to save the smoothed external variable dat
 
 ```
 
+### 2.3. Using the generated external variables
+
+Copy the generated external variable .mat files over to the following folder to use them in the process model:
+
+```
+.
+|__ external_variables
+    |___ data
+
+```
+
 ## 3. Controller tuning
 
 ### 3.1. Running the model

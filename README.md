@@ -47,7 +47,7 @@ Create the following folder structure to save to simulation results using the `S
             |__ valve_states
 ```
 
-### 1.4. Process States
+### 1.4. Process states
 
 The desired fault combinations can be set using the `PROCESS_STATE` setting. The following table shows which loaded organic valve faults and which lean electrolyte valve faults occur for the selected process state.
 
@@ -63,6 +63,14 @@ The desired fault combinations can be set using the `PROCESS_STATE` setting. The
 |      `7`      |       stiction       |          stuck         |
 |      `8`      |       stiction       |        stiction        |
 
+The valve states are represented by the following values, and are selected using variant subsystems:
+
+| Value | Valve State |
+|:-----:|:-----------:|
+|  `0`  |    normal   |
+|  `1`  |    stuck    |
+|  `2`  |   stiction  |
+
 The time that the selected process faults occur can be set using the following `start_time` parameters. Corresponding `stop_time` parameters are also provided to set the time at which the process faults stop ocurring. If no stop time is desired, set the respective `stop_time` parameter equal to the simulation time.
 
 | Parameter                   | Units | Description                                          |
@@ -72,15 +80,6 @@ The time that the selected process faults occur can be set using the following `
 | `valve_LE_fault_start_time` |   s   | Time for the lean electrolyte valve's fault to occur |
 | `valve_LE_fault_stop_time`  |   s   | Time for the lean electrolyte valve's fault to stop  |
 
-The valve states are represented using the following values:
-
-| Value | Valve State |
-|:-----:|:-----------:|
-|  `0`  |    normal   |
-|  `1`  |    stuck    |
-|  `2`  |   stiction  |
-
-The valve states are selected using variant subsystems.
 
 ## 2. External variables
 

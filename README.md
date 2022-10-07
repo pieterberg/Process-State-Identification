@@ -19,8 +19,9 @@ The model simulates two control valve faults, namely:
 1. Run the Simulink model from the MATLAB Live Script `process_model/copper_solvent_extraction_model.mlx`
 1. Run the MATLAB Live Script from the main `Process-State-Identification` folder
 
-### 1.2. Simulation settings
+### 1.2. Process settings
 
+#### Table 1: Process settings
 | Setting                           | Values                       | Description                                                                 |
 |-----------------------------------|------------------------------|-----------------------------------------------------------------------------|
 | `SAVE_IMAGES`                     | `true` <br> `false`          | Saves the generated images to the respective output folder if set to `true`.|
@@ -51,6 +52,7 @@ Create the following folder structure to save to simulation results using the `S
 
 The desired fault combinations can be set using the `PROCESS_STATE` setting. The following table shows which loaded organic valve faults and which lean electrolyte valve faults occur for the selected process state.
 
+#### Table 2: Process states
 | Process State | Loaded Organic Valve | Lean Electrolyte Valve |
 |:-------------:|:--------------------:|:----------------------:|
 |      `0`      |        normal        |         normal         |
@@ -65,6 +67,7 @@ The desired fault combinations can be set using the `PROCESS_STATE` setting. The
 
 The valve states are represented by the following values, and are selected using variant subsystems:
 
+#### Table 3: Valve states
 | Value | Valve State |
 |:-----:|:-----------:|
 |  `0`  |    normal   |
@@ -73,6 +76,7 @@ The valve states are represented by the following values, and are selected using
 
 The time that the selected process faults occur can be set using the following `start_time` parameters. Corresponding `stop_time` parameters are also provided to set the time at which the process faults stop ocurring. If no stop time is desired, set the respective `stop_time` parameter equal to the simulation time.
 
+#### Table 4: Process fault start and stop time settings
 | Parameter                   | Units | Description                                          |
 |-----------------------------|:-----:|------------------------------------------------------|
 | `valve_LO_fault_start_time` |   s   | Time for the loaded organic valve's fault to occur   |
@@ -116,6 +120,7 @@ Copy the generated external variable .mat files over to the following folder to 
 
 The following settings were used in the Signal Builder blocks in the `gaussian_external_variables.slx` file to generate the non-steady-state external variables used for the process model:
 
+#### Table 5: External variable properties
 |      Property      |                 Value                |
 |:------------------:|:------------------------------------:|
 |   Simulation time  |       20 hours (72000 seconds)       |
@@ -125,8 +130,7 @@ The following settings were used in the Signal Builder blocks in the `gaussian_e
 
 The first and last points of each signal were manually changed to start and stop on the steady-state values of the respective variable.
 
-#### Training data:
-
+#### Table 6: Training external variable properties
 |    Variable    |    Mean    |  Standard deviation    | Units |    Seed    |
 |:--------------:|:----------:|:----------------------:|:-----:|:----------:|
 |    $c_{PLS}$   |      7     |           1.4          |  g/L  |      1     |
@@ -134,8 +138,7 @@ The first and last points of each signal were manually changed to start and stop
 |   $f_{PLSP}$   |     278    |          55.6          |  L/s  |      5     |
 |   $f_{PLSS}$   |     278    |          55.6          |  L/s  |     16     |
 
-#### Testing data:
-
+#### Table 7: Testing external variable properties
 |    Variable    |    Mean    |  Standard deviation    | Units |    Seed    |
 |:--------------:|:----------:|:----------------------:|:-----:|:----------:|
 |    $c_{PLS}$   |      7     |           1.4          |  g/L  |     19     |

@@ -14,11 +14,10 @@ The model simulates two control valve faults, namely:
 
 ## 1. Process model
 
-### 1.1. Running the simulation
+### 1.1. Running the model
 
-1. Run the Simulink model from the MATLAB Live Script `process_model/copper_solvent_extraction_model.mlx`.
-
-1. Run the MATLAB Live Script from the main `Process-State-Identification` folder.
+1. Run the Simulink model from the MATLAB Live Script `process_model/copper_solvent_extraction_model.mlx`
+1. Run the MATLAB Live Script from the main `Process-State-Identification` folder
 
 ### 1.2. Simulation settings
 
@@ -85,7 +84,12 @@ The valve states are selected using variant subsystems.
 
 ## 2. External variables
 
-### 2.1. Output folder structure
+### 2.1. Running the model
+
+1. Run the Simulink model from the MATLAB Live Script `gaussian_external_variables.mlx`
+1. Run the MATLAB Live Script from the main `Process-State-Identification` folder
+
+### 2.2. Output folder structure
 
 Create the following folder structure to save the smoothed external variable data and graphs:
 
@@ -100,7 +104,14 @@ Create the following folder structure to save the smoothed external variable dat
 
 ## 3. Controller tuning
 
-### 3.1. Output folder structure
+### 3.1. Running the model
+
+1. Run the Simulink model from either of the following two MATLAB Live Scripts:
+    1. `feedback_arx_models.mlx`
+    1. `feedforward_arx_models.mlx`
+1. Run the above mentioned MATLAB Live Scripts from the main `Process-State-Identification` folder
+
+### 3.2. Output folder structure
 
 Create the following folder structure to save the ARX model results:
 

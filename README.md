@@ -12,7 +12,7 @@ The model simulates two control valve faults, namely:
 - stuck valves
 - and valve stiction, based on the physical valve stiction model developed by Shoukat Choudhury et al. (2005)
 
-## 1. Usage instructions
+## 1. Process model
 
 ### 1.1. Running the simulation
 
@@ -48,28 +48,7 @@ Create the following folder structure to save to simulation results using the `S
             |__ valve_states
 ```
 
-Create the following folder structure to save the ARX model results:
-
-```
-.
-|__ controller_tuning
-    |__ output
-        |__ feedback
-        |__ feedforward
-```
-
-Create the following folder structure to save the smoothed external variable data and graphs:
-
-```
-.
-|__ external_variables
-    |___ output
-         |__ data
-         |__ graphs
-
-```
-
-## 2. Process States
+### 1.4. Process States
 
 The desired fault combinations can be set using the `PROCESS_STATE` setting. The following table shows which loaded organic valve faults and which lean electrolyte valve faults occur for the selected process state.
 
@@ -103,6 +82,35 @@ The valve states are represented using the following values:
 |  `2`  |   stiction  |
 
 The valve states are selected using variant subsystems.
+
+## 2. External variables
+
+### 2.1. Output folder structure
+
+Create the following folder structure to save the smoothed external variable data and graphs:
+
+```
+.
+|__ external_variables
+    |___ output
+         |__ data
+         |__ graphs
+
+```
+
+## 3. Controller tuning
+
+### 3.1. Output folder structure
+
+Create the following folder structure to save the ARX model results:
+
+```
+.
+|__ controller_tuning
+    |__ output
+        |__ feedback
+        |__ feedforward
+```
 
 ## References
 

@@ -116,7 +116,7 @@ Copy the generated external variable .mat files over to the following folder to 
 
 ```
 
-# 2.4. External variables used in simulation
+### 2.4. External variables used in simulation
 
 The following settings were used in the Signal Builder blocks in the `gaussian_external_variables.slx` file to generate the non-steady-state external variables used for the process model:
 

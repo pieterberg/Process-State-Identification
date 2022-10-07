@@ -112,6 +112,37 @@ Copy the generated external variable .mat files over to the following folder to 
 
 ```
 
+# 2.4. External variables used in simulation
+
+The following settings were used in the Signal Builder blocks in the `gaussian_external_variables.slx` file to generate the non-steady-state external variables used for the process model:
+
+|      Property      |                 Value                |
+|:------------------:|:------------------------------------:|
+|   Simulation time  |       20 hours (72000 seconds)       |
+|    Sampling time   |              0.1 second              |
+| Standard deviation | $\sigma$ = 0.20 x steady-state value |
+|  Sample frequency  |              0.00015 Hz              |
+
+The first and last points of each signal were manually changed to start and stop on the steady-state values of the respective variable.
+
+#### Training data:
+
+|    Variable    |    Mean    |  Standard deviation    | Units |    Seed    |
+|:--------------:|:----------:|:----------------------:|:-----:|:----------:|
+|    $c_{PLS}$   |      7     |           1.4          |  g/L  |      1     |
+|    $c_{LE}$    |     35     |           7.0          |  g/L  |      2     |
+|   $f_{PLSP}$   |     278    |          55.6          |  L/s  |      5     |
+|   $f_{PLSS}$   |     278    |          55.6          |  L/s  |     16     |
+
+#### Testing data:
+
+|    Variable    |    Mean    |  Standard deviation    | Units |    Seed    |
+|:--------------:|:----------:|:----------------------:|:-----:|:----------:|
+|    $c_{PLS}$   |      7     |           1.4          |  g/L  |     19     |
+|    $c_{LE}$    |     35     |           7.0          |  g/L  |     22     |
+|   $f_{PLSP}$   |     278    |          55.6          |  L/s  |     28     |
+|   $f_{PLSS}$   |     278    |          55.6          |  L/s  |     30     |
+
 ## 3. Controller tuning
 
 ### 3.1. Running the model

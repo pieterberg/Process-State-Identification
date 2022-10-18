@@ -65,6 +65,9 @@ The desired fault combinations can be set using the `PROCESS_STATE` setting. The
 |      `6`      |         stuck        |        stiction        |
 |      `7`      |       stiction       |          stuck         |
 |      `8`      |       stiction       |        stiction        |
+|      `9`      |        custom        |         custom         |
+
+State `9` allows for custom behaviour to be defined in each control valve's `custom` variant subsystem's Stateflow chart.
 
 The valve states are represented by the following values, and are selected using variant subsystems:
 

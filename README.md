@@ -137,10 +137,10 @@ The following settings were used in the Signal Builder blocks in the `gaussian_e
 #### Table 5: External variable properties
 |      Property      |                 Value                |
 |:------------------:|:------------------------------------:|
-|   Simulation time  |       20 hours (72000 seconds)       |
+|   Simulation time  |      200 hours (720 000 seconds)     |
 |    Sampling time   |              0.1 second              |
 | Standard deviation | $\sigma$ = 0.20 x steady-state value |
-|  Sample frequency  |              0.00015 Hz              |
+|  Sample frequency  |              0.00005 Hz              |
 
 The first and last points of each signal were manually changed to start and stop on the steady-state values of the respective variable.
 

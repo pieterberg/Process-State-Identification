@@ -36,6 +36,8 @@ The model simulates two control valve faults, namely:
 
 ### 1.3. Output folder structure
 
+The .gitignore file has been set up to ignore all simulation output folders.
+
 Create the following folder structure to save to simulation results using the `SAVE_IMAGES` and `SAVE_DATA` settings:
 
 ```

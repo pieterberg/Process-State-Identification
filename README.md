@@ -33,6 +33,7 @@ The model simulates two control valve faults, namely:
 | `EXTERNAL_VARIABLES_DATASET`      | `'training'` <br> `'testing'`| Loads the training non-steady-state external variable dataset when set to `'training'`, or the testing non-steady-state external variable dataset when set to `'testing'`. Must specify a dataset to use regardless of the value of `EXTERNAL_VARIABLES_STEADY_STATE`.|
 | `LOWPASS_FILTER_TUNING`           | `true` <br> `false`          | Stops the loaded organic and lean electrolyte stiction models from 'sticking' when set to `true`. This can be used to tune the loaded organic and lean electrolyte stiction lowpass filters (see below). The loaded organic and lean electrolyte stiction models work as expected when set to `false`.|
 | `PROCESS_STATE`                   | see below                    | Select which process faults occur by selecting the process state. See Process States section below. |
+| `PROCESS_STATE_PLOTTING_REDUCED`  | `true` <br> `false`          | Only plots the single-fault process states (`0` to `4`) when set to `true`. Plots all the process states (`0` to `8`) when set to `false`. |
 
 ### 1.3. Output folder structure
 

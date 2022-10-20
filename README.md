@@ -140,8 +140,8 @@ The following settings were used in the Signal Builder blocks in the `gaussian_e
 |      Property      |                 Value                |
 |:------------------:|:------------------------------------:|
 |   Simulation time  |      200 hours (720 000 seconds)     |
-|    Sampling time   |              0.1 second              |
-| Standard deviation | $\sigma$ = 0.20 x steady-state value |
+|    Sampling time   |              1 second                |
+| Standard deviation | $\sigma$ = 0.10 x steady-state value |
 |  Sample frequency  |              0.00005 Hz              |
 
 The first and last points of each signal were manually changed to start and stop on the steady-state values of the respective variable.
@@ -149,18 +149,18 @@ The first and last points of each signal were manually changed to start and stop
 #### Table 6: Training external variable properties
 |    Variable    |    Mean    |  Standard deviation    | Units |    Seed    |
 |:--------------:|:----------:|:----------------------:|:-----:|:----------:|
-|    $c_{PLS}$   |      7     |           1.4          |  g/L  |      1     |
-|    $c_{LE}$    |     35     |           7.0          |  g/L  |      2     |
-|   $f_{PLSP}$   |     278    |          55.6          |  L/s  |      5     |
-|   $f_{PLSS}$   |     278    |          55.6          |  L/s  |     16     |
+|    $c_{PLS}$   |      7     |           0.7          |  g/L  |      1     |
+|    $c_{LE}$    |     35     |           3.5          |  g/L  |      2     |
+|   $f_{PLSP}$   |     278    |          27.8          |  L/s  |      5     |
+|   $f_{PLSS}$   |     278    |          27.8          |  L/s  |     16     |
 
 #### Table 7: Testing external variable properties
 |    Variable    |    Mean    |  Standard deviation    | Units |    Seed    |
 |:--------------:|:----------:|:----------------------:|:-----:|:----------:|
-|    $c_{PLS}$   |      7     |           1.4          |  g/L  |     19     |
-|    $c_{LE}$    |     35     |           7.0          |  g/L  |     22     |
-|   $f_{PLSP}$   |     278    |          55.6          |  L/s  |     28     |
-|   $f_{PLSS}$   |     278    |          55.6          |  L/s  |     30     |
+|    $c_{PLS}$   |      7     |           0.7          |  g/L  |     19     |
+|    $c_{LE}$    |     35     |           3.5          |  g/L  |     22     |
+|   $f_{PLSP}$   |     278    |          27.8          |  L/s  |     28     |
+|   $f_{PLSS}$   |     278    |          27.8          |  L/s  |     30     |
 
 ## 3. Controller tuning
 

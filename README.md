@@ -202,6 +202,20 @@ Create the following folder structure to save the ARX model results:
 | `NUMBER_CONSECUTIVE_ABOVE_UCL`          | $n\in{Z}\geq0$                   | Specify the number of consecutive measurements that must be above the UCL before a fault is detected.                                      |
 | `PROCESS_STATE_PLOTTING_REDUCED`        | `true` <br> `false`              | Only plots the single-fault process states (`0` to `4`) when set to `true`. Plots all the process states (`0` to `8`) when set to `false`. |
 
+### 4.3. Output folder structure
+
+Create the following folder structure to save to fault detection results using the `SAVE_IMAGES` and `SAVE_DATA` settings:
+
+```
+.
+|__ fault_detection
+    |__ output
+        |__ data
+        |__ fault_detection
+        |__ PCA
+        |__ training
+
+```
 ## References
 
 Komulainen, T., Doyle, F.J., Rantala, A., Jämsä-Jounela, S.L., 2009. Control of an industrial copper solvent extraction process. Journal of Process Control 19, 2–15. https://doi.org/10.1016/j.jprocont.2008.04.019

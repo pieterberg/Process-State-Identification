@@ -22,13 +22,13 @@ The model simulates two control valve faults, namely:
 ### 1.2. Process settings
 
 #### Table 1: Process settings
-| Setting                           | Values                       | Description                                                                 |
-|-----------------------------------|------------------------------|-----------------------------------------------------------------------------|
-| `SAVE_IMAGES`                     | `true` <br> `false`          | Saves the generated images to the respective output folder if set to `true`.|
-| `SAVE_DATA`                       | `true` <br> `false`          | Saves the simulation data to the respective output folder if set to `true`. |
-| `SENSOR_NOISE`                    | `true` <br> `false`          | Adds sensor noise to the measurements if set to `true`.                     |
-| `FEEDBACK_CONTROL`                | `true` <br> `false`          | Enables feedback control of the process if set to `true`.                   |
-| `FEEDFORWARD_CONTROL`             | `true` <br> `false`          | Enables feedforward control of the process if set to `true`.                |
+| Setting                           | Values                       | Description                                                                  |
+|-----------------------------------|------------------------------|------------------------------------------------------------------------------|
+| `SAVE_IMAGES`                     | `true` <br> `false`          | Saves the generated images to the respective output folders if set to `true`.|
+| `SAVE_DATA`                       | `true` <br> `false`          | Saves the simulation data to the respective output folder if set to `true`.  |
+| `SENSOR_NOISE`                    | `true` <br> `false`          | Adds sensor noise to the measurements if set to `true`.                      |
+| `FEEDBACK_CONTROL`                | `true` <br> `false`          | Enables feedback control of the process if set to `true`.                    |
+| `FEEDFORWARD_CONTROL`             | `true` <br> `false`          | Enables feedforward control of the process if set to `true`.                 |
 | `EXTERNAL_VARIABLES_STEADY_STATE` | `true` <br> `false`          | Sets the external variables to their constant steady-state values when set to `true`, or loads the non-steady-state external variable dataset selected by `EXTERNAL_VARIABLES_DATASET` when set to `false`.|
 | `EXTERNAL_VARIABLES_DATASET`      | `'training'` <br> `'testing'`| Loads the training non-steady-state external variable dataset when set to `'training'`, or the testing non-steady-state external variable dataset when set to `'testing'`. Must specify a dataset to use regardless of the value of `EXTERNAL_VARIABLES_STEADY_STATE`.|
 | `LOWPASS_FILTER_TUNING`           | `true` <br> `false`          | Stops the loaded organic and lean electrolyte stiction models from 'sticking' when set to `true`. This can be used to tune the loaded organic and lean electrolyte stiction lowpass filters (see below). The loaded organic and lean electrolyte stiction models work as expected when set to `false`.|
@@ -182,6 +182,21 @@ Create the following folder structure to save the ARX model results:
         |__ feedback
         |__ feedforward
 ```
+
+## 4. Fault detection
+
+### 4.2. Fault detection settings
+
+#### Table 8: Fault detection settings
+| Setting                                 | Values                           | Description                                                                                                                                |
+|-----------------------------------------|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| `SAVE_IMAGES`                           | `true` <br> `false`              | Saves the generated images to the respective output folders if set to `true`.                                                              |
+| `SAVE_DATA`                             | `true` <br> `false`              | Saves the fault detection data to the respective output folder if set to `true`.                                                           |
+| `NUMBER_OF_PRINCIPLE_COMPONENTS_TO_USE` | `1` to `11`                      | Specify the number of principal components to use for the principal component subspace.                                                    |
+| `T2_ALPHA`                              | $T^{2}_{\alpha}\in\mathbb{R}>0\$ | Upper control limit (UCL) for the Hotelling's T<sup>2</sup> statistic control chart.                                                       |
+| `Q_ALPHA`                               | $Q_{\alpha}\in\mathbb{R}>0$      | UCL for the Q statistic control chart.                                                                                                     |
+| `NUMBER_CONSECUTIVE_ABOVE_UCL`          | $n\in{Z}\geq0$                   | Specify the number of consecutive measurements that must be above the UCL before a fault is detected.                                      |
+| `PROCESS_STATE_PLOTTING_REDUCED`        | `true` <br> `false`              | Only plots the single-fault process states (`0` to `4`) when set to `true`. Plots all the process states (`0` to `8`) when set to `false`. |
 
 ## References
 

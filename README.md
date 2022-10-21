@@ -185,6 +185,10 @@ Create the following folder structure to save the ARX model results:
 
 ## 4. Fault detection
 
+### 4.1. Running the fault detection
+
+1. Run the fault detection MATLAB Live Script from the main `Process-State-Identification` folder
+
 ### 4.2. Fault detection settings
 
 #### Table 8: Fault detection settings

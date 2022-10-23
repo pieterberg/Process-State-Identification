@@ -201,6 +201,8 @@ Create the following folder structure to save the ARX model results:
 | `Q_ALPHA`                               | $Q_{\alpha}\in\mathbb{R}>0$      | UCL for the Q statistic control chart.                                                                                                     |
 | `NUMBER_CONSECUTIVE_ABOVE_UCL`          | $n\in{Z}\geq0$                   | Specify the number of consecutive measurements that must be above the UCL before a fault is detected.                                      |
 | `PROCESS_STATE_PLOTTING_REDUCED`        | `true` <br> `false`              | Only plots the single-fault process states (`0` to `4`) when set to `true`. Plots all the process states (`0` to `8`) when set to `false`. |
+| `ROC_CURVE_CONSTRUCTION_T2`             | `true` <br> `false`              | Appends the Hotelling's T<sup>2</sup> ROC curve results for the current $T^{2}_{\alpha}$ to the `ROC_CURVE_DATA_T2` table to use for constructing a Hotelling's T<sup>2</sup> ROC curve. |   
+| `ROC_CURVE_CONSTRUCTION_Q`              | `true` <br> `false`              | Appends the Q statistic ROC curve results for the current $Q_{\alpha}$ to the `ROC_CURVE_DATA_Q` table to use for constructing a Q statistic ROC curve.                                  | 
 
 ### 4.3. Output folder structure
 

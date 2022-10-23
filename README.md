@@ -39,7 +39,7 @@ The model simulates two control valve faults, namely:
 
 The .gitignore file has been set up to ignore all simulation output folders.
 
-Create the following folder structure to save to simulation results using the `SAVE_IMAGES` and `SAVE_DATA` settings:
+Create the following folder structure to save the simulation results using the `SAVE_IMAGES` and `SAVE_DATA` settings:
 
 ```
 .
@@ -115,9 +115,9 @@ Create the following folder structure to save the smoothed external variable dat
 ```
 .
 |__ external_variables
-    |___ output
-         |__ data
-         |__ graphs
+    |__ output
+        |__ data
+        |__ graphs
 
 ```
 
@@ -128,7 +128,7 @@ Copy the generated external variable .mat files over to the following folder to 
 ```
 .
 |__ external_variables
-    |___ data
+    |__ data
 
 ```
 
@@ -232,6 +232,28 @@ Create the following folder structure to save to fault detection results using t
 |----------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | `T2_OPERATING_INDEX` | $n\in{Z}\in[1 \ , nr \ of \ T^{2} \ ROC \ datapoints]$ | The index of the Hotelling's T<sup>2</sup> operating point in the Hotelling's T<sup>2</sup> ROC curve data file.  |
 | `Q_OPERATING_INDEX`  | $n\in{Z}\in[1 \ , nr \ of \ Q \ ROC \ datapoints]$     | The index of the Q statistic operating point in the Q statistic ROC curve data file.                              |
+
+### 5.3. Constructing the ROC curves
+
+Save the `ROC_CURVE_DATA_T2` and `ROC_CURVE_DATA_Q` data tables from the fault detection as .mat files and copy them over to the following folder to use for constructing the ROC curves:
+
+```
+.
+|__ roc_curves
+    |__ data
+
+```
+
+### 5.4. Output folder structure
+
+Create the following folder structure to save to generated ROC curves:
+
+```
+.
+|__ roc_curves
+    |__ output
+
+```
 
 ## References
 

@@ -218,6 +218,13 @@ Create the following folder structure to save to fault detection results using t
         |__ training
 
 ```
+
+## 5. ROC curves
+
+### 5.1. Generating the ROC curves
+
+1. Run the ROC curves MATLAB Live Script from the main `Process-State-Identification` folder
+
 ## References
 
 Komulainen, T., Doyle, F.J., Rantala, A., Jämsä-Jounela, S.L., 2009. Control of an industrial copper solvent extraction process. Journal of Process Control 19, 2–15. https://doi.org/10.1016/j.jprocont.2008.04.019

@@ -225,6 +225,14 @@ Create the following folder structure to save to fault detection results using t
 
 1. Run the ROC curves MATLAB Live Script from the main `Process-State-Identification` folder
 
+### 5.2. ROC curve settings
+
+#### Table 9: Process settings
+| Setting              | Values                                                 | Description                                                                                                       |
+|----------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| `T2_OPERATING_INDEX` | $n\in{Z}\in[1 \ , nr \ of \ T^{2} \ ROC \ datapoints]$ | The index of the Hotelling's T<sup>2</sup> operating point in the Hotelling's T<sup>2</sup> ROC curve data file.  |
+| `Q_OPERATING_INDEX`  | $n\in{Z}\in[1 \ , nr \ of \ Q \ ROC \ datapoints]$     | The index of the Q statistic operating point in the Q statistic ROC curve data file.                              |
+
 ## References
 
 Komulainen, T., Doyle, F.J., Rantala, A., Jämsä-Jounela, S.L., 2009. Control of an industrial copper solvent extraction process. Journal of Process Control 19, 2–15. https://doi.org/10.1016/j.jprocont.2008.04.019

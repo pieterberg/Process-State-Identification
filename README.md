@@ -32,12 +32,12 @@ The model simulates two control valve faults, namely:
 | `EXTERNAL_VARIABLES_STEADY_STATE` | `true` <br> `false`          | Sets the external variables to their constant steady-state values when set to `true`, or loads the non-steady-state external variable dataset selected by `EXTERNAL_VARIABLES_DATASET` when set to `false`.|
 | `EXTERNAL_VARIABLES_DATASET`      | `'training'` <br> `'testing'`| Loads the training non-steady-state external variable dataset when set to `'training'`, or the testing non-steady-state external variable dataset when set to `'testing'`. Must specify a dataset to use regardless of the value of `EXTERNAL_VARIABLES_STEADY_STATE`.|
 | `LOWPASS_FILTER_TUNING`           | `true` <br> `false`          | Stops the loaded organic and lean electrolyte stiction models from 'sticking' when set to `true`. This can be used to tune the loaded organic and lean electrolyte stiction lowpass filters (see below). The loaded organic and lean electrolyte stiction models work as expected when set to `false`.|
-| `PROCESS_STATE`                   | see below                    | Select which process faults occur by selecting the process state. See Process States section below. |
+| `PROCESS_STATE`                   | see below                    | Select which process faults occur by selecting the process state. See section 1.4. Process States below.                                   |
 | `PROCESS_STATE_PLOTTING_REDUCED`  | `true` <br> `false`          | Only plots the single-fault process states (`0` to `4`) when set to `true`. Plots all the process states (`0` to `8`) when set to `false`. |
 
 ### 1.3. Output folder structure
 
-The .gitignore file has been set up to ignore all simulation output folders.
+The .gitignore file has been set up to ignore all output folders.
 
 Create the following folder structure to save the simulation results using the `SAVE_IMAGES` and `SAVE_DATA` settings:
 
@@ -196,7 +196,7 @@ Create the following folder structure to save the ARX model results:
 |-----------------------------------------|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | `SAVE_IMAGES`                           | `true` <br> `false`              | Saves the generated images to the respective output folders if set to `true`.                                                              |
 | `SAVE_DATA`                             | `true` <br> `false`              | Saves the fault detection data to the respective output folder if set to `true`.                                                           |
-| `NUMBER_OF_PRINCIPLE_COMPONENTS_TO_USE` | `1` to `11`                      | Specify the number of principal components to use for the principal component subspace.                                                    |
+| `NUMBER_OF_PRINCIPLE_COMPONENTS_TO_USE` | `1` to `11`                      | Specify the number of principal components to use for the reduced principal component subspace.                                            |
 | `T2_ALPHA`                              | $T^{2}_{\alpha}\in\mathbb{R}>0\$ | Upper control limit (UCL) for the Hotelling's T<sup>2</sup> statistic control chart.                                                       |
 | `Q_ALPHA`                               | $Q_{\alpha}\in\mathbb{R}>0$      | UCL for the Q statistic control chart.                                                                                                     |
 | `NUMBER_CONSECUTIVE_ABOVE_UCL`          | $n\in{Z}\geq0$                   | Specify the number of consecutive measurements that must be above the UCL before a fault is detected.                                      |

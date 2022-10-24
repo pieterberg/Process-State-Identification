@@ -22,24 +22,24 @@ The model simulates two control valve faults, namely:
 ### 1.2. Process settings
 
 #### Table 1: Process settings
-| Setting                           | Values                       | Description                                                                 |
-|-----------------------------------|------------------------------|-----------------------------------------------------------------------------|
-| `SAVE_IMAGES`                     | `true` <br> `false`          | Saves the generated images to the respective output folder if set to `true`.|
-| `SAVE_DATA`                       | `true` <br> `false`          | Saves the simulation data to the respective output folder if set to `true`. |
-| `SENSOR_NOISE`                    | `true` <br> `false`          | Adds sensor noise to the measurements if set to `true`.                     |
-| `FEEDBACK_CONTROL`                | `true` <br> `false`          | Enables feedback control of the process if set to `true`.                   |
-| `FEEDFORWARD_CONTROL`             | `true` <br> `false`          | Enables feedforward control of the process if set to `true`.                |
+| Setting                           | Values                       | Description                                                                  |
+|-----------------------------------|------------------------------|------------------------------------------------------------------------------|
+| `SAVE_IMAGES`                     | `true` <br> `false`          | Saves the generated images to the respective output folders if set to `true`.|
+| `SAVE_DATA`                       | `true` <br> `false`          | Saves the simulation data to the respective output folder if set to `true`.  |
+| `SENSOR_NOISE`                    | `true` <br> `false`          | Adds sensor noise to the measurements if set to `true`.                      |
+| `FEEDBACK_CONTROL`                | `true` <br> `false`          | Enables feedback control of the process if set to `true`.                    |
+| `FEEDFORWARD_CONTROL`             | `true` <br> `false`          | Enables feedforward control of the process if set to `true`.                 |
 | `EXTERNAL_VARIABLES_STEADY_STATE` | `true` <br> `false`          | Sets the external variables to their constant steady-state values when set to `true`, or loads the non-steady-state external variable dataset selected by `EXTERNAL_VARIABLES_DATASET` when set to `false`.|
 | `EXTERNAL_VARIABLES_DATASET`      | `'training'` <br> `'testing'`| Loads the training non-steady-state external variable dataset when set to `'training'`, or the testing non-steady-state external variable dataset when set to `'testing'`. Must specify a dataset to use regardless of the value of `EXTERNAL_VARIABLES_STEADY_STATE`.|
 | `LOWPASS_FILTER_TUNING`           | `true` <br> `false`          | Stops the loaded organic and lean electrolyte stiction models from 'sticking' when set to `true`. This can be used to tune the loaded organic and lean electrolyte stiction lowpass filters (see below). The loaded organic and lean electrolyte stiction models work as expected when set to `false`.|
-| `PROCESS_STATE`                   | see below                    | Select which process faults occur by selecting the process state. See Process States section below. |
+| `PROCESS_STATE`                   | see below                    | Select which process faults occur by selecting the process state. See section 1.4. Process States below.                                   |
 | `PROCESS_STATE_PLOTTING_REDUCED`  | `true` <br> `false`          | Only plots the single-fault process states (`0` to `4`) when set to `true`. Plots all the process states (`0` to `8`) when set to `false`. |
 
 ### 1.3. Output folder structure
 
-The .gitignore file has been set up to ignore all simulation output folders.
+The .gitignore file has been set up to ignore all output folders.
 
-Create the following folder structure to save to simulation results using the `SAVE_IMAGES` and `SAVE_DATA` settings:
+Create the following folder structure to save the simulation results using the `SAVE_IMAGES` and `SAVE_DATA` settings:
 
 ```
 .
@@ -115,9 +115,9 @@ Create the following folder structure to save the smoothed external variable dat
 ```
 .
 |__ external_variables
-    |___ output
-         |__ data
-         |__ graphs
+    |__ output
+        |__ data
+        |__ graphs
 
 ```
 
@@ -128,7 +128,7 @@ Copy the generated external variable .mat files over to the following folder to 
 ```
 .
 |__ external_variables
-    |___ data
+    |__ data
 
 ```
 
@@ -181,6 +181,78 @@ Create the following folder structure to save the ARX model results:
     |__ output
         |__ feedback
         |__ feedforward
+```
+
+## 4. Fault detection
+
+### 4.1. Running the fault detection
+
+1. Run the fault detection MATLAB Live Script from the main `Process-State-Identification` folder
+
+### 4.2. Fault detection settings
+
+#### Table 8: Fault detection settings
+| Setting                                 | Values                           | Description                                                                                                                                |
+|-----------------------------------------|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| `SAVE_IMAGES`                           | `true` <br> `false`              | Saves the generated images to the respective output folders if set to `true`.                                                              |
+| `SAVE_DATA`                             | `true` <br> `false`              | Saves the fault detection data to the respective output folder if set to `true`.                                                           |
+| `NUMBER_OF_PRINCIPLE_COMPONENTS_TO_USE` | `1` to `11`                      | Specify the number of principal components to use for the reduced principal component subspace.                                            |
+| `T2_ALPHA`                              | $T^{2}_{\alpha}\in\mathbb{R}>0\$ | Upper control limit (UCL) for the Hotelling's T<sup>2</sup> statistic control chart.                                                       |
+| `Q_ALPHA`                               | $Q_{\alpha}\in\mathbb{R}>0$      | UCL for the Q statistic control chart.                                                                                                     |
+| `NUMBER_CONSECUTIVE_ABOVE_UCL`          | $n\in{Z}\geq0$                   | Specify the number of consecutive measurements that must be above the UCL before a fault is detected.                                      |
+| `PROCESS_STATE_PLOTTING_REDUCED`        | `true` <br> `false`              | Only plots the single-fault process states (`0` to `4`) when set to `true`. Plots all the process states (`0` to `8`) when set to `false`. |
+| `ROC_CURVE_CONSTRUCTION_T2`             | `true` <br> `false`              | Appends the Hotelling's T<sup>2</sup> ROC curve results for the current $T^{2}_{\alpha}$ to the `ROC_CURVE_DATA_T2` table to use for constructing a Hotelling's T<sup>2</sup> ROC curve. |   
+| `ROC_CURVE_CONSTRUCTION_Q`              | `true` <br> `false`              | Appends the Q statistic ROC curve results for the current $Q_{\alpha}$ to the `ROC_CURVE_DATA_Q` table to use for constructing a Q statistic ROC curve.                                  | 
+
+### 4.3. Output folder structure
+
+Create the following folder structure to save to fault detection results using the `SAVE_IMAGES` and `SAVE_DATA` settings:
+
+```
+.
+|__ fault_detection
+    |__ output
+        |__ data
+        |__ fault_detection
+        |__ PCA
+        |__ training
+
+```
+
+## 5. ROC curves
+
+### 5.1. Generating the ROC curves
+
+1. Run the ROC curves MATLAB Live Script from the main `Process-State-Identification` folder
+
+### 5.2. ROC curve settings
+
+#### Table 9: Process settings
+| Setting              | Values                                                 | Description                                                                                                       |
+|----------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| `T2_OPERATING_INDEX` | $n\in{Z}\in[1 \ , nr \ of \ T^{2} \ ROC \ datapoints]$ | The index of the Hotelling's T<sup>2</sup> operating point in the Hotelling's T<sup>2</sup> ROC curve data file.  |
+| `Q_OPERATING_INDEX`  | $n\in{Z}\in[1 \ , nr \ of \ Q \ ROC \ datapoints]$     | The index of the Q statistic operating point in the Q statistic ROC curve data file.                              |
+
+### 5.3. Constructing the ROC curves
+
+Save the `ROC_CURVE_DATA_T2` and `ROC_CURVE_DATA_Q` data tables from the fault detection as .mat files and copy them over to the following folder to use for constructing the ROC curves:
+
+```
+.
+|__ roc_curves
+    |__ data
+
+```
+
+### 5.4. Output folder structure
+
+Create the following folder structure to save to generated ROC curves:
+
+```
+.
+|__ roc_curves
+    |__ output
+
 ```
 
 ## References

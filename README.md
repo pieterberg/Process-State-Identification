@@ -4,7 +4,7 @@
 
 <img src="https://img.shields.io/badge/Stellenbosch University-BEng ChemE-008BC0?style=flat"/>
 
-Chemical Engineering final year project using PCA and statistical classification to identify a process' state.
+Chemical Engineering final year project simulating a copper solvent extraction process with valve faults using PCA and statistical classification to identify when the process enters a fault state.
 
 The process model consists of a dynamic model of a copper solvent extraction plant based on the model developed by Komulainen et al. (2009, 2006). 
 The model simulates two control valve faults, namely:

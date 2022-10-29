@@ -203,6 +203,17 @@ Create the following folder structure to save the ARX model results:
 | `PROCESS_STATE_PLOTTING_REDUCED`        | `true` <br> `false`              | Only plots the single-fault process states (`0` to `4`) when set to `true`. Plots all the process states (`0` to `8`) when set to `false`. |
 | `ROC_CURVE_CONSTRUCTION_T2`             | `true` <br> `false`              | Appends the Hotelling's T<sup>2</sup> ROC curve results for the current $T^{2}_{\alpha}$ to the `ROC_CURVE_DATA_T2` table to use for constructing a Hotelling's T<sup>2</sup> ROC curve. |   
 | `ROC_CURVE_CONSTRUCTION_Q`              | `true` <br> `false`              | Appends the Q statistic ROC curve results for the current $Q_{\alpha}$ to the `ROC_CURVE_DATA_Q` table to use for constructing a Q statistic ROC curve.                                  | 
+| `STATE_1_START_TIME`                    | $n\in{Z}\geq0$                   | The time at which process state 1 starts in the fault detection dataset in units of seconds. Must be divisable by `SAMPLING_RATE`.         | 
+| `STATE_1_STOP_TIME`                     | $n\in{Z}\geq0$                   | The time at which process state 1 stops in the fault detection dataset in units of seconds. Must be divisable by `SAMPLING_RATE`.          | 
+| `STATE_2_START_TIME`                    | $n\in{Z}\geq0$                   | The time at which process state 2 starts in the fault detection dataset in units of seconds. Must be divisable by `SAMPLING_RATE`.         | 
+| `STATE_2_STOP_TIME`                     | $n\in{Z}\geq0$                   | The time at which process state 2 stops in the fault detection dataset in units of seconds. Must be divisable by `SAMPLING_RATE`.          | 
+| `STATE_3_START_TIME`                    | $n\in{Z}\geq0$                   | The time at which process state 3 starts in the fault detection dataset in units of seconds. Must be divisable by `SAMPLING_RATE`.         | 
+| `STATE_3_STOP_TIME`                     | $n\in{Z}\geq0$                   | The time at which process state 3 stops in the fault detection dataset in units of seconds. Must be divisable by `SAMPLING_RATE`.          | 
+| `STATE_4_START_TIME`                    | $n\in{Z}\geq0$                   | The time at which process state 4 starts in the fault detection dataset in units of seconds. Must be divisable by `SAMPLING_RATE`.         | 
+| `STATE_4_STOP_TIME`                     | $n\in{Z}\geq0$                   | The time at which process state 4 stops in the fault detection dataset in units of seconds. Must be divisable by `SAMPLING_RATE`.          | 
+| `SAMPLING_RATE`                         | $n\in{Z}\geq0$                   | The sensor sampling rate used for the data in units of seconds.                                                                            |
+| `DETECTION_DELAY_CONSTRUCTION_T2`       | `true` <br> `false`              | Appends the Hotelling's T<sup>2</sup> detection delay results for the current $T^{2}_{\alpha}$ to the `DETECTION_DELAY_DATA_T2` table to use for constructing a Hotelling's T<sup>2</sup> detection delay plot. |   
+| `DETECTION_DELAY_CONSTRUCTION_Q`        | `true` <br> `false`              | Appends the Q statistic detection delay results for the current $Q_{\alpha}$ to the `DETECTION_DELAY_DATA_Q` table to use for constructing a Q statistic detection delay plot.                                  | 
 
 ### 4.3. Output folder structure
 
@@ -227,11 +238,15 @@ Create the following folder structure to save to fault detection results using t
 
 ### 5.2. ROC curve settings
 
-#### Table 9: Process settings
-| Setting              | Values                                                 | Description                                                                                                       |
-|----------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| `T2_OPERATING_INDEX` | $n\in{Z}\in[1 \ , nr \ of \ T^{2} \ ROC \ datapoints]$ | The index of the Hotelling's T<sup>2</sup> operating point in the Hotelling's T<sup>2</sup> ROC curve data file.  |
-| `Q_OPERATING_INDEX`  | $n\in{Z}\in[1 \ , nr \ of \ Q \ ROC \ datapoints]$     | The index of the Q statistic operating point in the Q statistic ROC curve data file.                              |
+#### Table 9: ROC curve settings
+| Setting                        | Values                                                 | Description                                                                                                                                 |
+|--------------------------------|--------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| `T2_TRAINING_INDEX`            | $n\in{Z}\in[1 \ , nr \ of \ T^{2} \ ROC \ datapoints]$ | The index of the Hotelling's T<sup>2</sup> training $T^{2}_{\alpha}$ point in the Hotelling's T<sup>2</sup> ROC curve data file.            |
+| `Q_TRAINING_INDEX`             | $n\in{Z}\in[1 \ , nr \ of \ Q \ ROC \ datapoints]$     | The index of the Q statistic training $Q_{\alpha}$ point in the Q statistic ROC curve data file.                                            |
+| `T2_RECOMMENDED_INDEX`         | $n\in{Z}\in[1 \ , nr \ of \ T^{2} \ ROC \ datapoints]$ | The index of the Hotelling's T<sup>2</sup> recommended $T^{2}_{\alpha}$ point in the Hotelling's T<sup>2</sup> ROC curve data file.         |
+| `Q_RECOMMENDED_INDEX`          | $n\in{Z}\in[1 \ , nr \ of \ Q \ ROC \ datapoints]$     | The index of the Q statistic recommended $Q_{\alpha}$ point in the Q statistic ROC curve data file.                                         |
+| `T2_OPTIMAL_SENSITIVITY_INDEX` | $n\in{Z}\in[1 \ , nr \ of \ T^{2} \ ROC \ datapoints]$ | The index of the Hotelling's T<sup>2</sup> optimal sensitivity $T^{2}_{\alpha}$ point in the Hotelling's T<sup>2</sup> ROC curve data file. |
+| `Q_OPTIMAL_SENSITIVITY_INDEX`  | $n\in{Z}\in[1 \ , nr \ of \ Q \ ROC \ datapoints]$     | The index of the Q statistic optimal sensitivity $Q_{\alpha}$ point in the Q statistic ROC curve data file.                                 |
 
 ### 5.3. Constructing the ROC curves
 

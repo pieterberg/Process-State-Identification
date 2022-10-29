@@ -215,12 +215,6 @@ Create the following folder structure to save the ARX model results:
 | `DETECTION_DELAY_CONSTRUCTION_T2`       | `true` <br> `false`              | Appends the Hotelling's T<sup>2</sup> detection delay results for the current $T^{2}_{\alpha}$ to the `DETECTION_DELAY_DATA_T2` table to use for constructing a Hotelling's T<sup>2</sup> detection delay plot. |   
 | `DETECTION_DELAY_CONSTRUCTION_Q`        | `true` <br> `false`              | Appends the Q statistic detection delay results for the current $Q_{\alpha}$ to the `DETECTION_DELAY_DATA_Q` table to use for constructing a Q statistic detection delay plot.                                  | 
 
-
-
-
-
-
-
 ### 4.3. Output folder structure
 
 Create the following folder structure to save to fault detection results using the `SAVE_IMAGES` and `SAVE_DATA` settings:
@@ -245,15 +239,14 @@ Create the following folder structure to save to fault detection results using t
 ### 5.2. ROC curve settings
 
 #### Table 9: ROC curve settings
-| Setting              | Values                                                 | Description                                                                                                         |
-|----------------------|--------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| `T2_TRAINING_INDEX` | $n\in{Z}\in[1 \ , nr \ of \ T^{2} \ ROC \ datapoints]$ | The index of the Hotelling's T<sup>2</sup> training UCL point in the Hotelling's T<sup>2</sup> ROC curve data file.  |
-| `Q_TRAINING_INDEX`  | $n\in{Z}\in[1 \ , nr \ of \ Q \ ROC \ datapoints]$     | The index of the Q statistic training UCL point in the Q statistic ROC curve data file.                              |
-| `T2_RECOMMENDED_INDEX` | $n\in{Z}\in[1 \ , nr \ of \ T^{2} \ ROC \ datapoints]$ | The index of the Hotelling's T<sup>2</sup> recommended UCL point in the Hotelling's T<sup>2</sup> ROC curve data file.  |
-| `Q_RECOMMENDED_INDEX`  | $n\in{Z}\in[1 \ , nr \ of \ Q \ ROC \ datapoints]$     | The index of the Q statistic recommended UCL point in the Q statistic ROC curve data file.                              |
-| `T2_OPTIMAL_SENSITIVITY_INDEX` | $n\in{Z}\in[1 \ , nr \ of \ T^{2} \ ROC \ datapoints]$ | The index of the Hotelling's T<sup>2</sup> optimal sensitivity UCL point in the Hotelling's T<sup>2</sup> ROC curve data file.  |
-| `Q_OPTIMAL_SENSITIVITY_INDEX`  | $n\in{Z}\in[1 \ , nr \ of \ Q \ ROC \ datapoints]$     | The index of the Q statistic optimal sensitivity UCL point in the Q statistic ROC curve data file.                              |
-
+| Setting                        | Values                                                 | Description                                                                                                                                 |
+|--------------------------------|--------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| `T2_TRAINING_INDEX`            | $n\in{Z}\in[1 \ , nr \ of \ T^{2} \ ROC \ datapoints]$ | The index of the Hotelling's T<sup>2</sup> training $T^{2}_{\alpha}$ point in the Hotelling's T<sup>2</sup> ROC curve data file.            |
+| `Q_TRAINING_INDEX`             | $n\in{Z}\in[1 \ , nr \ of \ Q \ ROC \ datapoints]$     | The index of the Q statistic training $Q_{\alpha}$ point in the Q statistic ROC curve data file.                                            |
+| `T2_RECOMMENDED_INDEX`         | $n\in{Z}\in[1 \ , nr \ of \ T^{2} \ ROC \ datapoints]$ | The index of the Hotelling's T<sup>2</sup> recommended $T^{2}_{\alpha}$ point in the Hotelling's T<sup>2</sup> ROC curve data file.         |
+| `Q_RECOMMENDED_INDEX`          | $n\in{Z}\in[1 \ , nr \ of \ Q \ ROC \ datapoints]$     | The index of the Q statistic recommended $Q_{\alpha}$ point in the Q statistic ROC curve data file.                                         |
+| `T2_OPTIMAL_SENSITIVITY_INDEX` | $n\in{Z}\in[1 \ , nr \ of \ T^{2} \ ROC \ datapoints]$ | The index of the Hotelling's T<sup>2</sup> optimal sensitivity $T^{2}_{\alpha}$ point in the Hotelling's T<sup>2</sup> ROC curve data file. |
+| `Q_OPTIMAL_SENSITIVITY_INDEX`  | $n\in{Z}\in[1 \ , nr \ of \ Q \ ROC \ datapoints]$     | The index of the Q statistic optimal sensitivity $Q_{\alpha}$ point in the Q statistic ROC curve data file.                                 |
 
 ### 5.3. Constructing the ROC curves
 

@@ -4,7 +4,7 @@ Instructions for running the process model, generating the external variable dat
 
 ### Table of Contents
 
-- [1. Process model](#1-process-model)
+- [1. Process model \[1\]](#1-process-model-1)
   - [1.1. Running the model](#11-running-the-model)
   - [1.2. Process settings](#12-process-settings)
   - [1.3. Output folder structure](#13-output-folder-structure)
@@ -15,21 +15,21 @@ Instructions for running the process model, generating the external variable dat
   - [2.2. Output folder structure](#22-output-folder-structure)
   - [2.3. Using the generated external variables](#23-using-the-generated-external-variables)
   - [2.4. External variables used in the simulation](#24-external-variables-used-in-the-simulation)
-- [3. Controller tuning](#3-controller-tuning)
+- [3. Controller tuning \[4\]](#3-controller-tuning-4)
   - [3.1. Running the model](#31-running-the-model)
   - [3.2. Output folder structure](#32-output-folder-structure)
 - [4. Fault detection](#4-fault-detection)
   - [4.1. Running the fault detection](#41-running-the-fault-detection)
   - [4.2. Fault detection settings](#42-fault-detection-settings)
   - [4.3. Output folder structure](#43-output-folder-structure)
-- [5. ROC curves](#5-roc-curves)
+- [5. ROC curves \[7\]](#5-roc-curves-7)
   - [5.1. Generating the ROC curves](#51-generating-the-roc-curves)
   - [5.2. ROC curve settings](#52-roc-curve-settings)
   - [5.3. Constructing the ROC curves](#53-constructing-the-roc-curves)
   - [5.4. Output folder structure](#54-output-folder-structure)
 - [References](#references)
 
-## 1. Process model
+## 1. Process model [1]
 
 ### 1.1. Running the model
 
@@ -71,7 +71,7 @@ Create the following folder structure to save the simulation results using the `
 
 ### 1.4. Process states
 
-The desired fault combinations can be set using the `PROCESS_STATE` setting. The following table shows which loaded organic valve faults and which lean electrolyte valve faults occur for the selected process state.
+The desired fault combinations can be set using the `PROCESS_STATE` setting. The following table shows which loaded organic valve faults [2] and which lean electrolyte valve faults occur for the selected process state.
 
 #### Table 2: Process states
 | Process State | Loaded Organic Valve | Lean Electrolyte Valve |
@@ -110,13 +110,11 @@ The time that the selected process faults occur can be set using the following `
 
 ### 1.5 Lowpass filter tuning
 
-The loaded organic and lean electrolyte control valve stiction models use 1<sup>st</sup> order Butterworth lowpass filters to account for the sensor noise's effect on the valve stem positions. The valves 'stick' when the filtered valve position reaches a turning point.
+The loaded organic and lean electrolyte control valve stiction models use 1<sup>st</sup> order Butterworth lowpass filters [3] to account for the sensor noise's effect on the valve stem positions. The valves 'stick' when the filtered valve position reaches a turning point.
 
 The cutoff frequency of the lowpass filters can be tuned by seting the `LOWPASS_FILTER_TUNING` setting to `true`. The stiction models then still run, but the control valves will not 'stick'. The filtered signals can be viewed using the `Valve LO Lowpass Filter Scope` and `Valve LE Lowpass Filter Scope` scopes found in their respective stiction-valve-model subsytems. The process state has to be set to such a state in which the valve under consideration is experiencing stiction for the lowpass filters to be active.
 
 The cutoff frequency for the loaded organic control valve's lowpass filter can be set using `valve_LO_stiction_lowpass_filter_cutoff_frequency` (rad/s). The cutoff frequency for the lean electrolyte control valve's lowpass filter can be set using `valve_LE_stiction_lowpass_filter_cutoff_frequency` (rad/s). 
-
-
 
 ## 2. External variables
 
@@ -179,7 +177,7 @@ The first and last points of each signal were manually changed to start and stop
 |   $f_{PLSP}$   |     278    |          27.8          |  L/s  |     28     |
 |   $f_{PLSS}$   |     278    |          27.8          |  L/s  |     30     |
 
-## 3. Controller tuning
+## 3. Controller tuning [4]
 
 ### 3.1. Running the model
 
@@ -190,7 +188,7 @@ The first and last points of each signal were manually changed to start and stop
 
 ### 3.2. Output folder structure
 
-Create the following folder structure to save the ARX model results:
+Create the following folder structure to save the ARX model [5] results:
 
 ```
 .
@@ -214,8 +212,8 @@ Create the following folder structure to save the ARX model results:
 | `SAVE_IMAGES`                           | `true` <br> `false`              | Saves the generated images to the respective output folders if set to `true`.                                                              |
 | `SAVE_DATA`                             | `true` <br> `false`              | Saves the fault detection data to the respective output folder if set to `true`.                                                           |
 | `NUMBER_OF_PRINCIPLE_COMPONENTS_TO_USE` | `1` to `11`                      | Specify the number of principal components to use for the reduced principal component subspace.                                            |
-| `T2_ALPHA`                              | $T^{2}_{\alpha}\in\mathbb{R}>0\$ | Upper control limit (UCL) for the Hotelling's T<sup>2</sup> statistic control chart.                                                       |
-| `Q_ALPHA`                               | $Q_{\alpha}\in\mathbb{R}>0$      | UCL for the Q statistic control chart.                                                                                                     |
+| `T2_ALPHA`                              | $T^{2}_{\alpha}\in\mathbb{R}>0\$ | Upper control limit (UCL) for the Hotelling's T<sup>2</sup> statistic control chart [6].                                                       |
+| `Q_ALPHA`                               | $Q_{\alpha}\in\mathbb{R}>0$      | UCL for the Q statistic control chart [6].                                                                                                     |
 | `NUMBER_CONSECUTIVE_ABOVE_UCL`          | $n\in{Z}\geq0$                   | Specify the number of consecutive measurements that must be above the UCL before a fault is detected.                                      |
 | `PROCESS_STATE_PLOTTING_REDUCED`        | `true` <br> `false`              | Only plots the single-fault process states (`0` to `4`) when set to `true`. Plots all the process states (`0` to `8`) when set to `false`. |
 | `ROC_CURVE_CONSTRUCTION_T2`             | `true` <br> `false`              | Appends the Hotelling's T<sup>2</sup> ROC curve results for the current $T^{2}_{\alpha}$ to the `ROC_CURVE_DATA_T2` table to use for constructing a Hotelling's T<sup>2</sup> ROC curve. |   
@@ -247,7 +245,7 @@ Create the following folder structure to save to fault detection results using t
 
 ```
 
-## 5. ROC curves
+## 5. ROC curves [7]
 
 ### 5.1. Generating the ROC curves
 

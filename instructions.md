@@ -27,6 +27,7 @@ Instructions for running the process model, generating the external variable dat
   - [5.2. ROC curve settings](#52-roc-curve-settings)
   - [5.3. Constructing the ROC curves](#53-constructing-the-roc-curves)
   - [5.4. Output folder structure](#54-output-folder-structure)
+- [References](#references)
 
 ## 1. Process model
 
@@ -285,3 +286,19 @@ Create the following folder structure to save to generated ROC curves:
     |__ output
 
 ```
+
+## References
+
+[1]	T. Komulainen, P. Pekkala, A. Rantala, and S.-L. Jämsä-Jounela, “Dynamic modelling of an industrial copper solvent extraction process,” Hydrometallurgy, vol. 81, no. 1, pp. 52–61, Jan. 2006, doi: 10.1016/j.hydromet.2005.11.001.
+
+[2]	M. A. A. Shoukat Choudhury, N. F. Thornhill, and S. L. Shah, “Modelling Valve Stiction,” Control Eng Pract, vol. 13, no. 5, pp. 641–658, May 2005, doi: 10.1016/j.conengprac.2004.05.005.
+
+[3]	MathWorks, “Butterworth filter with varying coefficients - Simulink,” 2022. https://www.mathworks.com/help/control/ref/varyinglowpassfilter.html (accessed Oct. 25, 2022).
+
+[4]	T. Komulainen, F. J. Doyle, A. Rantala, and S. L. Jämsä-Jounela, “Control of an industrial copper solvent extraction process,” J Process Control, vol. 19, no. 1, pp. 2–15, Jan. 2009, doi: 10.1016/j.jprocont.2008.04.019.
+
+[5]	T. E. Marlin, Process Control: Designing Processes and Control Systems for Dynamic Performance, 2nd ed. 2015.
+
+[6]	A. Bakdi and A. Kouadri, “An improved plant-wide fault detection scheme based on PCA and adaptive threshold for reliable process monitoring: Application on the new revised model of Tennessee Eastman process,” J Chemom, vol. 32, no. 5, p. e2978, May 2018, doi: 10.1002/CEM.2978.
+
+[7]	G. James, D. Witten, T. Hastie, and R. Tibshirani, An Introduction to Statistical Learning. New York, NY: Springer US, 2021. doi: 10.1007/978-1-0716-1418-1.

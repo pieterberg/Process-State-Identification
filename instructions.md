@@ -1,5 +1,33 @@
 # Instructions
 
+Instructions for running the process model, generating the external variable datasets, tuning the feedback and feedforward controllers, performing the fault detection, and quantifying the fault detection performance are provided in this document.
+
+#### Table of Contents
+
+- [1. Process model](#1-process-model)
+  - [1.1. Running the model](#11-running-the-model)
+  - [1.2. Process settings](#12-process-settings)
+  - [1.3. Output folder structure](#13-output-folder-structure)
+  - [1.4. Process states](#14-process-states)
+  - [1.5 Lowpass filter tuning](#15-lowpass-filter-tuning)
+- [2. External variables](#2-external-variables)
+  - [2.1. Running the model](#21-running-the-model)
+  - [2.2. Output folder structure](#22-output-folder-structure)
+  - [2.3. Using the generated external variables](#23-using-the-generated-external-variables)
+  - [2.4. External variables used in the simulation](#24-external-variables-used-in-the-simulation)
+- [3. Controller tuning](#3-controller-tuning)
+  - [3.1. Running the model](#31-running-the-model)
+  - [3.2. Output folder structure](#32-output-folder-structure)
+- [4. Fault detection](#4-fault-detection)
+  - [4.1. Running the fault detection](#41-running-the-fault-detection)
+  - [4.2. Fault detection settings](#42-fault-detection-settings)
+  - [4.3. Output folder structure](#43-output-folder-structure)
+- [5. ROC curves](#5-roc-curves)
+  - [5.1. Generating the ROC curves](#51-generating-the-roc-curves)
+  - [5.2. ROC curve settings](#52-roc-curve-settings)
+  - [5.3. Constructing the ROC curves](#53-constructing-the-roc-curves)
+  - [5.4. Output folder structure](#54-output-folder-structure)
+
 ## 1. Process model
 
 ### 1.1. Running the model

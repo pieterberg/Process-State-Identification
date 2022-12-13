@@ -12,6 +12,10 @@ The model simulates two control valve faults, namely:
 - stuck valves
 - and valve stiction, based on the physical valve stiction model developed by Shoukat Choudhury et al. (2005)
 
+## Resources
+
+Instructions for running the process model, fitting the ARX models, tuning the feedback and feedforward controllers, simulating the process states, performing the statistical process control, detecting the simulated control valve faults, and quantifying the performance of the fault detection classifiers are avialable in [intructions.md](instructions.md).
+
 ## References
 
 Komulainen, T., Doyle, F.J., Rantala, A., Jämsä-Jounela, S.L., 2009. Control of an industrial copper solvent extraction process. Journal of Process Control 19, 2–15. https://doi.org/10.1016/j.jprocont.2008.04.019

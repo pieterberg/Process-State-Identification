@@ -2,9 +2,9 @@
 
 # Process State Identification
 
-<img src="https://img.shields.io/badge/Stellenbosch University-BEng ChemE-008BC0?style=flat"/> <img src="https://img.shields.io/badge/Process Engineering-80%25 (Pass with Distinction)-008BC0?style=flat"/>
+<img src="https://img.shields.io/badge/Stellenbosch University-BEng ChemE-008BC0?style=flat"/> <img src="https://img.shields.io/badge/Process Engineering-80%25 (Pass with Distinction)-008BC0?style=flat"/> <img src="https://img.shields.io/badge/SAIMM-Prestige Prize for the Best Final-Year Mineral Processing Project-008BC0?style=flat"/>
 
-Chemical Engineering final year project simulating a copper solvent extraction process with valve faults using PCA and statistical classification to identify when the process enters a fault state.
+Chemical Engineering final-year project simulating a copper solvent extraction process with valve faults using PCA and statistical classification to identify when the process enters a fault state.
 
 The process model consists of a dynamic model of a copper solvent extraction plant based on the model developed by Komulainen et al. (2009, 2006). 
 The model simulates two control valve faults, namely:

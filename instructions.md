@@ -97,7 +97,7 @@ The valve states are represented by the following values, and are selected using
 |  `1`  |    stuck    |
 |  `2`  |   stiction  |
 
-The time that the selected process faults occur can be set using the following `start_time` parameters. Corresponding `stop_time` parameters are also provided to set the time at which the process faults stop ocurring. If no stop time is desired, set the respective `stop_time` parameter equal to the simulation time plus one.
+The time that the selected process faults occur can be set using the following `start_time` parameters. Corresponding `stop_time` parameters are also provided to set the time at which the process faults stop occurring. If no stop time is desired, set the respective `stop_time` parameter equal to the simulation time plus one.
 
 #### Table 4: Process fault start and stop time settings
 | Parameter                   | Units | Description                                          |

@@ -28,11 +28,7 @@ Table 1 provides the trained, recommended, and optimal sensitivity T<sup>2</sup>
 
 Table 1: Combined fault detection’s sensitivity and 1 - specificity for the different upper control limits
 
-| Upper control limits       | T<sup>2</sup><sub>α</sub> | Q<sub>α</sub> |  Sensitivity  | 1 - Specificity |
-|----------------------------|:-------------------------:|:-------------:|:-------------:|:---------------:|
-|     Trained                |             16            |        3      |     0.5974    |      0.0732     |
-|     Recommended            |             12            |        2      |     0.6528    |      0.0830     |
-|     Optimal sensitivity    |              8            |        1      |     0.7805    |      0.2043     |
+<img src="results/roc_curves/faults_training/sensitivity_and_specificity_table.PNG" />
 
 It is therefore proposed that the predictive maintenance model for the developed copper solvent extraction plant uses the recommended upper control limits. These upper control limits strike a balance between a high specificity and ensuring that the highest number of control valve faults can be detected. This ensures a high rich electrolyte product quality, while at the same time not raising too many false alarms and wasting operator work hours.
 

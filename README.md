@@ -26,6 +26,14 @@ Figure 1: ROC curves for the Hotelling's T<sup>2</sup> statistic and Q statistic
 
 Table 1 provides the trained, recommended, and optimal sensitivity T<sup>2</sup><sub>α</sub> and Q<sub>α</sub> upper control limits. The associated combined fault detection’s senstivity and 1 - specificity for the different upper control limits are also given.
 
+Table 1: Combined fault detection’s sensitivity and 1 - specificity for the different upper control limits
+
+| Upper control limits       | T<sup>2</sup><sub>α</sub> | Q<sub>α</sub> |  Sensitivity  | 1 - Specificity |
+|----------------------------|:-------------------------:|:-------------:|:-------------:|:---------------:|
+|     Trained                |             16            |        3      |     0.5974    |      0.0732     |
+|     Recommended            |             12            |        2      |     0.6528    |      0.0830     |
+|     Optimal sensitivity    |              8            |        1      |     0.7805    |      0.2043     |
+
 ## References
 
 Komulainen, T., Doyle, F.J., Rantala, A., Jämsä-Jounela, S.L., 2009. Control of an industrial copper solvent extraction process. Journal of Process Control 19, 2–15. https://doi.org/10.1016/j.jprocont.2008.04.019

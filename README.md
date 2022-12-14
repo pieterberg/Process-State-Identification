@@ -18,6 +18,12 @@ The model simulates two control valve faults, namely:
 
 - The [results](results) folder contains the simulation and fault detection data in .csv format, and the generated graphs produced throughout the project are available.
 
+## Results
+
+<img src="results/roc_curves/faults_training/recommended_UCLs/roc_curve_smooth_operating.png" />
+
+#### Figure 1: ROC curves for the Hotelling's T<sup>2</sup> statistic and Q statistic control charts for the simulated process faults dataset with the left dark squares indicating the trained upper control limits, the right dark squares indicating the optimal sensitivity upper control limits, and the recommended upper control limits indicated by the dark triangles
+
 ## References
 
 Komulainen, T., Doyle, F.J., Rantala, A., Jämsä-Jounela, S.L., 2009. Control of an industrial copper solvent extraction process. Journal of Process Control 19, 2–15. https://doi.org/10.1016/j.jprocont.2008.04.019

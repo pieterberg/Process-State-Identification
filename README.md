@@ -14,9 +14,9 @@ The model simulates two control valve faults, namely:
 
 ## Resources
 
-Instructions for running the process model, fitting the ARX models, tuning the feedback and feedforward controllers, simulating the process states, performing the statistical process control, detecting the simulated control valve faults, and quantifying the performance of the fault detection classifiers are available in [intructions.md](instructions.md).
+- [Intructions.md](instructions.md) contains instructions for running the process model, fitting the ARX models, tuning the feedback and feedforward controllers, simulating the process states, performing the statistical process control, detecting the simulated control valve faults, and quantifying the performance of the fault detection classifiers.
 
-The results of the project are available in the [results](results) folder. The simulation and fault detection data are provided in .csv files, and the generated graphs produced and used throughout and for the project are available.
+- The [results](results) folder contains the simulation and fault detection data in .csv format, and the generated graphs produced throughout the project are available.
 
 ## References
 

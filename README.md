@@ -34,6 +34,8 @@ Table 1: Combined fault detection’s sensitivity and 1 - specificity for the di
 |     Recommended            |             12            |        2      |     0.6528    |      0.0830     |
 |     Optimal sensitivity    |              8            |        1      |     0.7805    |      0.2043     |
 
+It is therefore proposed that the predictive maintenance model for the developed copper solvent extraction plant uses the recommended upper control limits. These upper control limits strike a balance between a high specificity and ensuring that the highest number of control valve faults can be detected. This ensures a high rich electrolyte product quality, while at the same time not raising too many false alarms and wasting operator work hours.
+
 ## References
 
 Komulainen, T., Doyle, F.J., Rantala, A., Jämsä-Jounela, S.L., 2009. Control of an industrial copper solvent extraction process. Journal of Process Control 19, 2–15. https://doi.org/10.1016/j.jprocont.2008.04.019

@@ -24,6 +24,8 @@ The model simulates two control valve faults, namely:
 
 Figure 1: ROC curves for the Hotelling's T<sup>2</sup> statistic and Q statistic control charts for the simulated process faults dataset with the left dark squares indicating the trained upper control limits, the right dark squares indicating the optimal sensitivity upper control limits, and the recommended upper control limits indicated by the dark triangles
 
+Table 1 provides the trained, recommended, and optimal sensitivity $T^{2}_{\alpha}$ and $Q_{\alpha}$ upper control limits. The associated combined fault detection’s senstivity and 1 - specificity for the different upper control limits are also given.
+
 ## References
 
 Komulainen, T., Doyle, F.J., Rantala, A., Jämsä-Jounela, S.L., 2009. Control of an industrial copper solvent extraction process. Journal of Process Control 19, 2–15. https://doi.org/10.1016/j.jprocont.2008.04.019

@@ -20,6 +20,8 @@ The model simulates two control valve faults, namely:
 
 ## Results
 
+Control limits that balance the specificity of the training control limits and the sensitivity of the optimal sensitivity control limits are required. The following recommended upper control limits are proposed: a T<sup>2</sup><sub>α</sub> value of 12, and a Q<sub>α</sub> value of 2. These represent an average point between the trained upper control limits and the optimal sensitivity upper control limits. The recommended upper control limits are provided in Figure 1, and are indicated by the dark triangles. The left dark squares in Figure 1 represent the trained upper control limits, and the right dark squares in Figure 1 represent the optimal sensitivity upper control limits.
+
 <img src="results/roc_curves/faults_training/recommended_UCLs/roc_curve_smooth_operating.png" />
 
 Figure 1: ROC curves for the Hotelling's T<sup>2</sup> statistic and Q statistic control charts for the simulated process faults dataset with the left dark squares indicating the trained upper control limits, the right dark squares indicating the optimal sensitivity upper control limits, and the recommended upper control limits indicated by the dark triangles

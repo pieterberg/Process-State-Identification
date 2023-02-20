@@ -26,7 +26,7 @@ Control limits that balance the specificity of the training control limits and t
 
 Figure 1: ROC curves for the Hotelling's T<sup>2</sup> statistic and Q statistic control charts for the simulated process faults dataset with the left dark squares indicating the trained upper control limits, the right dark squares indicating the optimal sensitivity upper control limits, and the recommended upper control limits indicated by the dark triangles
 
-Table 1 provides the trained, recommended, and optimal sensitivity T<sup>2</sup><sub>α</sub> and Q<sub>α</sub> upper control limits. The associated combined fault detection’s senstivity and 1 - specificity for the different upper control limits are also given.
+Table 1 provides the trained, recommended, and optimal sensitivity T<sup>2</sup><sub>α</sub> and Q<sub>α</sub> upper control limits. The associated combined fault detection’s sensitivity and 1 - specificity for the different upper control limits are also given.
 
 Table 1: Combined fault detection’s sensitivity and 1 - specificity for the different upper control limits
 

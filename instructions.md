@@ -36,6 +36,8 @@ Instructions for running the process model, generating the external variable dat
 1. Run the Simulink model from the MATLAB Live Script `process_model/copper_solvent_extraction_model.mlx`
 1. Run the MATLAB Live Script from the main `Process-State-Identification` folder
 
+The Simulink model requires the MATLAB `Control System Toolbox` to be installed.
+
 ### 1.2. Process settings
 
 #### Table 1: Process settings

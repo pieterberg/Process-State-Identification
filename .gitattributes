@@ -26,3 +26,7 @@
 *.pdf binary
 *.png binary
 *.xlsx binary
+
+## Linguist overrides
+*.mlx linguist-language=MATLAB linguist-detectable
+

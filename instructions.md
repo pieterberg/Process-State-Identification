@@ -1,6 +1,6 @@
 # Instructions
 
-Instructions for running the process model, generating the external variable datasets, tuning the feedback and feedforward controllers, performing the fault detection, and quantifying the fault detection performance are provided in this document.
+This document provides instructions for running the process model, generating the external variable datasets, tuning the feedback and feedforward controllers, performing the fault detection, and quantifying the fault detection performance.
 
 ### Table of Contents
 
